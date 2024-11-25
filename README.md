@@ -2,7 +2,12 @@
 
 [Jingkai Wang](https://github.com/jkwang28), [Jue Gong](https://github.com/gobunu), [Lin Zhang](https://github.com/wanliyungui), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), [Yulun Zhang](http://yulunzhang.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "One-Step Diffusion Model for Face Restoration", arXiv, 2024
 
-[arXiv] [[supplementary material](https://github.com/jkwang28/OSDFace/releases/tag/v1)] [visual results] [pretrained models]
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]() 
+[![download](https://img.shields.io/github/downloads/jkwang28/OSDFace/total.svg)](https://github.com/jkwang28/OSDFace/releases)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=jkwang28.OSDFace&left_color=green&right_color=red)
+[![GitHub Stars](https://img.shields.io/github/stars/jkwang28/OSDFace?style=social)](https://github.com/jkwang28/OSDFace)
+
+[[supplementary material](https://github.com/jkwang28/OSDFace/releases/tag/v1)] [[project page](https://jkwang28.github.io/OSDFace-web/)] [pretrained models]
 
 #### 🔥🔥🔥 News
 
