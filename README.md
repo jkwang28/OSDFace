@@ -2,7 +2,7 @@
 
 [Jingkai Wang](https://github.com/jkwang28), [Jue Gong](https://github.com/gobunu), [Lin Zhang](https://github.com/wanliyungui), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), [Yulun Zhang](http://yulunzhang.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "One-Step Diffusion Model for Face Restoration", arXiv, 2024
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]() 
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2411.17163) 
 [![download](https://img.shields.io/github/downloads/jkwang28/OSDFace/total.svg)](https://github.com/jkwang28/OSDFace/releases)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=jkwang28.OSDFace&left_color=green&right_color=red)
 [![GitHub Stars](https://img.shields.io/github/stars/jkwang28/OSDFace?style=social)](https://github.com/jkwang28/OSDFace)
@@ -113,7 +113,7 @@ If you find the code helpful in your resarch or work, please cite the following 
 @article{wang2024osdface,
     title={One-Step Diffusion Model for Face Restoration},
     author={Wang, Jingkai and Gong, Jue and Zhang, Lin and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun and Yang, Xiaokang},
-    journal={arXiv preprint arXiv:2409.08384},
+    journal={arXiv preprint arXiv:2411.17163},
     year={2024}
 }
 ```
