@@ -1,13 +1,13 @@
 # OSDFace: One-Step Diffusion Model for Face Restoration
 
-[Jingkai Wang](https://github.com/jkwang28), [Jue Gong](https://github.com/gobunu), [Lin Zhang](https://github.com/wanliyungui), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), [Yulun Zhang](http://yulunzhang.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "One-Step Diffusion Model for Face Restoration", arXiv, 2024
+[Jingkai Wang](https://github.com/jkwang28), [Jue Gong](https://github.com/gobunu), [Lin Zhang](https://github.com/wanliyungui), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), [Yulun Zhang](http://yulunzhang.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "One-Step Diffusion Model for Face Restoration", 2024
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2411.17163) 
-[![download](https://img.shields.io/github/downloads/jkwang28/OSDFace/total.svg)](https://github.com/jkwang28/OSDFace/releases)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=jkwang28.OSDFace&left_color=green&right_color=red)
+[![page](https://img.shields.io/badge/project-Page-blue.svg)](https://jkwang28.github.io/OSDFace-web/)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-green.svg)](https://arxiv.org/abs/2411.17163)
+[![supp](https://img.shields.io/badge/supplementary_material-Paper-orange.svg)](https://github.com/jkwang28/OSDFace/releases/download/v1/supp.pdf)
+[![releases](https://img.shields.io/github/downloads/jkwang28/OSDFace/total.svg)](https://github.com/jkwang28/OSDFace/releases)
+[![visitors](https://visitor-badge.laobi.icu/badge?page_id=jkwang28.OSDFace&right_color=violet)](https://github.com/jkwang28/OSDFace)
 [![GitHub Stars](https://img.shields.io/github/stars/jkwang28/OSDFace?style=social)](https://github.com/jkwang28/OSDFace)
-
-[[supplementary material](https://github.com/jkwang28/OSDFace/releases/tag/v1)] [[project page](https://jkwang28.github.io/OSDFace-web/)] [pretrained models]
 
 #### 🔥🔥🔥 News
 
@@ -48,7 +48,7 @@
 We achieved state-of-the-art performance on synthetic and real-world blur dataset. Detailed results can be found in the paper.
 
 <details>
-<summary>Quantitative Comparisons (click to expand)</summary>
+<summary>&ensp;Quantitative Comparisons (click to expand) </summary>
 <li> Results in Table 1 on synthetic dataset (CelebA-Test) from main paper. 
 <p align="center">
 <img src="images/quan-celeba.png" >
@@ -61,7 +61,7 @@ We achieved state-of-the-art performance on synthetic and real-world blur datase
 </li>
 </details>
 <details open>
-<summary>Visual Comparisons (click to expand)</summary>
+<summary>&ensp;Visual Comparisons (click to expand) </summary>
 <li> Results in Figure 5 on synthetic dataset (CelebA-Test) from main paper.
 <p align="center">
 <img src="images/vis-main-celeba.png" >
@@ -74,8 +74,8 @@ We achieved state-of-the-art performance on synthetic and real-world blur datase
 </li>
 </details>
 <details>
-<summary  style="margin-left: 2rem;">More Comparisons on Synthetic Dataset...</summary>
-<li style="margin-left: 2rem;">Results in Figure 4, 5, 6 on synthetic dataset (CelebA-Test) from supplemental material.
+<summary  style="margin-left: 2rem;">&ensp;More Comparisons on Synthetic Dataset... </summary>
+<li style="margin-left: 2rem;"> Results in Figure 4, 5, 6 on synthetic dataset (CelebA-Test) from supplemental material.
 <p align="center">
 <img src="images/vis-supp-celeba-1.png" >
 </p>
@@ -88,8 +88,8 @@ We achieved state-of-the-art performance on synthetic and real-world blur datase
 </li>
 </details>
 <details>
-<summary  style="margin-left: 2rem;">More Comparisons on Real-World Dataset...</summary>
-<li style="margin-left: 2rem;">Results in Figure 7, 8, 9, 10 on real-world datasets (Wider-Test, LFW-Test, WebPhoto-Test) from supplemental material.
+<summary  style="margin-left: 2rem;">&ensp;More Comparisons on Real-World Dataset... </summary>
+<li style="margin-left: 2rem;"> Results in Figure 7, 8, 9, 10 on real-world datasets (Wider-Test, LFW-Test, WebPhoto-Test) from supplemental material.
 <p align="center">
 <img src="images/vis-supp-wider.png" >
 </p>
@@ -122,4 +122,4 @@ If you find the code helpful in your resarch or work, please cite the following 
 
 [TBD]
 
-![Visitor Count](https://profile-counter.glitch.me/jkwang28/count.svg)
+<!-- ![Visitor Count](https://profile-counter.glitch.me/jkwang28/count.svg) -->
