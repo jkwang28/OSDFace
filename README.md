@@ -4,7 +4,7 @@
 
 [![page](https://img.shields.io/badge/Project-Page-blue?logo=github&logoSvg)](https://jkwang28.github.io/OSDFace-web/)
 [![arXiv](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg)](https://arxiv.org/abs/2411.17163)
-[![supp](https://img.shields.io/badge/Supplementary_material-Paper-orange.svg)](https://github.com/jkwang28/OSDFace/releases/download/v1/supp.pdf)
+[![supp](https://img.shields.io/badge/Supplementary_material-Paper-orange.svg)](https://github.com/jkwang28/OSDFace/releases/download/v2/supp.pdf)
 [![releases](https://img.shields.io/github/downloads/jkwang28/OSDFace/total.svg)](https://github.com/jkwang28/OSDFace/releases)
 [![visitors](https://visitor-badge.laobi.icu/badge?page_id=jkwang28.OSDFace&right_color=violet)](https://github.com/jkwang28/OSDFace)
 [![GitHub Stars](https://img.shields.io/github/stars/jkwang28/OSDFace?style=social)](https://github.com/jkwang28/OSDFace)
@@ -12,6 +12,8 @@
 #### 🔥🔥🔥 News
 
 - **2024-11-25:** This repo is released.
+- **2025-02-27:** Congratulations! OSDFace is accepted to CVPR 2025.
+- **2025-04-23:** Results are released. (Synthetic dataset: CelebA-Test; Real-world datasets: Wider-Test, LFW-Test, and WebPhoto-Test)
 
 ---
 
@@ -35,7 +37,7 @@
 
 ## 🔗 Contents
 
-- [ ] Datasets
+- [x] Datasets
 - [ ] Models
 - [ ] Testing
 - [ ] Training
@@ -43,9 +45,23 @@
 - [x] [Citation](#Citation)
 - [ ] [Acknowledgements](#Acknowledgements)
 
+## <a name="datasets"></a>📊 Datasets
+
+**Training Dataset:**
+
+We use [FFHQ](https://github.com/NVlabs/ffhq-dataset) and [FFHQR](https://github.com/skylab-tech/ffhqr-dataset) for training. All of them are resized to 512x512. 
+
+**Testing Dataset:**
+
+We use CelebA-Test as the synthetic dataset. The download link can refer to [DAEFR](https://github.com/LIAGM/DAEFR). 
+
+We use Wider-Test, LFW-Test, and WebPhoto-Test as the real-world datasets. The download links can refer to [DAEFR](https://github.com/LIAGM/DAEFR) and [VQFR](https://github.com/TencentARC/VQFR). 
+
+Thanks a lot for their contribution to Face Restoration. 
+
 ## <a name="results"></a>🔎 Results
 
-We achieved state-of-the-art performance on synthetic and real-world datasets. Detailed results can be found in the paper.
+We achieved state-of-the-art performance on synthetic and real-world datasets. Detailed results can be found in the paper, and the full results could be downloaded here: [Google Drive](https://drive.google.com/file/d/1BQkh6mLGtmSSk0DvH_fpX2xx99UoSIcR/view?usp=sharing) or [OneDrive](https://sjtueducn-my.sharepoint.com/:u:/g/personal/jingkaiwang_sjtu_edu_cn/EWxudCoxhSVGng5FRawnzdYBhzROUfxCgBa2chUZFYfYkQ?e=yISwFp). 
 
 <details>
 <summary>&ensp;Quantitative Comparisons (click to expand) </summary>
@@ -110,11 +126,11 @@ We achieved state-of-the-art performance on synthetic and real-world datasets. D
 If you find the code helpful in your research or work, please cite the following paper(s).
 
 ```
-@article{wang2024osdface,
-    title={One-Step Diffusion Model for Face Restoration},
+@inproceedings{wang2025osdface,
+    title={OSDFace: One-Step Diffusion Model for Face Restoration},
     author={Wang, Jingkai and Gong, Jue and Zhang, Lin and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun and Yang, Xiaokang},
-    journal={arXiv preprint arXiv:2411.17163},
-    year={2024}
+    booktitle={CVPR},
+    year={2025}
 }
 ```
 
