@@ -1,1 +1,456 @@
-Hello GitHub Pages
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="OSDFace: One-Step Diffusion Model for Face Restoration">
+  <meta property="og:title" content="OSDFace" />
+  <meta property="og:description" content="One-Step Diffusion Model for Face Restoration" />
+  <meta property="og:url" content="https://jkwang28.github.io/OSDFace/" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="face restoration, diffusion model, deep learning, computer vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>OSDFace</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+  <div id="loading" style="display: none;">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <button id="back-to-top" class="button is-primary is-rounded" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 99;">
+    <span class="icon">
+      <i class="fas fa-arrow-up"></i>
+    </span>
+  </button>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">One-Step Diffusion Model for Face Restoration</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/jkwang28" target="_blank">Jingkai Wang<sup>1</sup></a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/gobunu" target="_blank">Jue Gong<sup>1</sup></a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/wanliyungui" target="_blank">Lin Zhang<sup>1</sup></a>,</span>
+              <span class="author-block">
+                <a href="https://zhengchen1999.github.io/" target="_blank">Zheng Chen<sup>1</sup></a>,</span>
+              <br />
+              <span class="author-block">
+                <a href="" target="_blank">Xing Liu<sup>2</sup></a>,</span>
+              <span class="author-block">
+                <a href="" target="_blank">Hong Gu<sup>2</sup></a>,</span>
+              <span class="author-block">
+                <a href="https://isabelleliu630.github.io/" target="_blank">Yutong
+                  Liu<sup>1</sup></a><sup>&dagger;</sup>,</span>
+              <span class="author-block">
+                <a href="http://yulunzhang.com/" target="_blank">Yulun Zhang<sup>1</sup></a><sup>&dagger;</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=yDEavdMAAAAJ" target="_blank">Xiaokang
+                  Yang<sup>1</sup></a>.</span>
+            </div>
+
+            <div class="is-size-5 publication-institutions">
+              <!-- Institutions -->
+              <span class="institution-block">
+                <sup>1</sup>Shanghai Jiao Tong University,
+                <sup>2</sup>vivo Mobile Communication Co., Ltd
+              </span>
+              <span class="eql-cntrb">
+                <small><br><sup>*</sup>Indicates Equal Contribution. </small> <small><sup>&dagger;</sup>Indicates
+                  Corresponding Authors. </small>
+              </span>
+            </div>
+
+            <hr class="is-divider" style="width: 75%; margin: 1.5rem auto;">
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper PDF link -->
+                <span class="link-block">
+                  <a href="https://github.com/jkwang28/OSDFace/releases/download/v1/main.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2411.17163" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="https://github.com/jkwang28/OSDFace/releases/download/v1/supp.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/jkwang28/OSDFace" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+              <!-- <div class="publication-links">
+                <!-- Visual Results link -->
+              <!-- <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1-Mfy8XHG55Bc19gAXqNaNitO0GEx7O1r?usp=drive_link" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-images"></i>
+                  </span>
+                  <span>Visual Results</span>
+                  </a>
+                </span> -->
+
+              <!-- Pretrained Models link -->
+              <!-- <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1hoHAG2yoLltloQ0SYv-QLxwk9Y8ZnTnH?usp=drive_link" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-archive"></i>
+                  </span>
+                  <span>Pretrained Models</span>
+                  </a>
+                </span> 
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Image Comparison Section -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Face Restoration</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-one-third">
+          <div style="width:300px;height:300px;overflow:hidden;border:0px">
+            <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
+              <iframe src="https://imgsli.com/MzIxNTU3" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div style="width:300px;height:300px;overflow:hidden;border:0px">
+            <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
+              <iframe src="https://imgsli.com/MzIxNTcz" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div style="width:300px;height:300px;overflow:hidden;border:0px">
+            <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
+              <iframe src="https://imgsli.com/MzIxNjU2" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End New Image Comparison Section -->
+  
+  <!-- Paper abstract -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Diffusion models have demonstrated impressive performance in face restoration. Yet, their multi-step
+              inference process remains computationally intensive, limiting their applicability in real-world scenarios.
+              Moreover, existing methods often struggle to generate face images that are harmonious, realistic, and
+              consistent with the subject’s identity. In this work, we propose OSDFace, a novel one-step diffusion model
+              for face restoration. Specifically, we propose a visual representation embedder (VRE) to better capture
+              prior information and understand the input face. In VRE, low-quality faces are processed by a visual
+              tokenizer and subsequently embedded with a vector-quantized dictionary to generate visual prompts.
+              Additionally, we incorporate a facial identity loss derived from face recognition to further ensure
+              identity consistency. We further employ a generative adversarial network (GAN) as a guidance model to
+              encourage distribution alignment between the restored face and the ground truth. Experimental results
+              demonstrate that OSDFace surpasses current state-of-the-art (SOTA) methods in both visual quality and
+              quantitative metrics, generating high-fidelity, natural face images with high identity consistency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Method Section-->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-sixths">
+          <h2 class="title is-3 has-text-left">Method</h2>
+          <figure>
+            <img data-src="static/images/overall-osdface.png" alt="Overview of OSDFace" 
+                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+            <figcaption class="title is-5">Overview of OSDFace</figcaption>
+          </figure>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              We propose <strong>OSDFace</strong>, a novel one-step diffusion model for face restoration. First, to
+              establish a visual representation embedder (VRE), we train the autoencoder and VQ dictionary for HQ and LQ
+              face domains using self-reconstruction and feature association loss \(\mathcal{L}_{\text{assoc}}\).
+              <strong>Then</strong>, we use the VRE containing LQ encoder and dictionary to embed the LQ face \(I_L\),
+              producing the visual prompt embedding \(p_L\). <strong>Next</strong>, the LQ image \(I_L\) along with
+              \(p_L\) are inputed into the generator \(\mathcal{G}_\theta\) to yield the predicted HQ face
+              \(\hat{I}_H\): \(\hat{I}_H=\mathcal{G}_\theta(I_L; \operatorname{VRE}(I_L))\). The generator
+              \(\mathcal{G}_\theta\) incorporates the pretrained VAE and UNet from Stable Diffusion, with only the UNet
+              fine-tuned via LoRA. <strong>Additionally</strong>, a series of feature alignment losses are applied to
+              ensure the generation of harmonious and coherent face images. The generator and discriminator are trained
+              alternately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Method Section-->
+
+  <!-- Results Section -->
+  <section class="section hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-left">
+          <div class="column is-five-sixths">
+            <h2 class="title is-3">Results</h2>
+            <details>
+              <summary class="title is-5">Quantitative Comparisons (click to expand)</summary>
+              <div class="content">
+                <ul>
+                  <li class="title is-6">Results in Table 1 on synthetic dataset (CelebA-Test) from main paper. </li>
+                </ul>
+                <p class="has-text-centered">
+                  <img data-src="static/images/quan-celeba.png" 
+                       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                </p>
+                <ul>
+                  <li class="title is-6">Results in Table 2 on real-world datasets (Wider-Test, LFW-Test, WebPhoto-Test)
+                    from main paper. </li>
+                </ul>
+                <p class="has-text-centered">
+                  <img data-src="static/images/quan-realworld.png"
+                       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                </p>
+              </div>
+            </details>
+            <details open>
+              <summary class="title is-5">Visual Comparisons (click to expand)</summary>
+              <div class="content">
+                <ul>
+                  <li class="title is-6">Results in Figure 5 on synthetic dataset (CelebA-Test) from main paper. </li>
+                </ul>
+                <p class="has-text-centered">
+                  <img data-src="static/images/vis-main-celeba.png" 
+                       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                </p>
+                <ul>
+                  <li class="title is-6">Results in Figure 6 on real-world dataset (Wider-Test, LFW-Test, WebPhoto-Test) from main paper. </li>
+                </ul>
+                <p class="has-text-centered">
+                  <img data-src="static/images/vis-main-realworld.png"
+                       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                </p>
+
+                <details>
+                  <summary class="title is-5" style="margin-left: 2rem;">More Comparisons on Synthetic Dataset...</summary>
+                  <div class="content" style="margin-left: 2rem;">
+                    <p class="has-text-centered">
+                      <img data-src="static/images/vis-supp-celeba-1.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                      <img data-src="static/images/vis-supp-celeba-2.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                      <img data-src="static/images/vis-supp-celeba-3.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    </p>
+                  </div>
+                  <div style="margin-bottom: 2px;"></div>
+                </details>
+
+                <details>
+                  <summary class="title is-5" style="margin-left: 2rem;">More Comparisons on Real-World Dataset...</summary>
+                  <div class="content" style="margin-left: 2rem;">
+                    <p class="has-text-centered">
+                      <img data-src="static/images/vis-supp-wider.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                      <img data-src="static/images/vis-supp-lfw.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                      <img data-src="static/images/vis-supp-webphoto.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                      <img data-src="static/images/vis-supp-realworld.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Results Section -->
+
+  <!-- Video Section -->
+  <!-- <section class="section hero is-small is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-left">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Video</h2>
+        <div id="intro-video" class="video-container">
+          <div class="item item-video-demo">
+            <video poster="" id="demoVideo" controls muted loop width="100%">
+              <source src="static/videos/Demo.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End Video Section
+
+<!-- Slide Section -->
+  <!-- <section class="section hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-left">
+        <div class="column is-five-sixths">
+          <h2 class="title">Slide</h2>
+          <iframe src="static/pdfs/Slide.pdf" width="100%" height="550"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End Slide Section -->
+
+  <!-- Poster Section -->
+  <!-- <section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-left">
+        <div class="column is-five-sixths">
+          <h2 class="title">Poster</h2>
+          <iframe src="static/pdfs/Poster.pdf" width="100%" height="550"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End Poster Section -->
+
+  <!-- BibTeX citation -->
+  <section class="section hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-left">
+        <div class="column is-five-sixths">
+          <h2 class="title">BibTeX</h2>
+          <pre style="background-color: #ffffff; overflow-x: auto; white-space: pre-wrap;">
+<code>@inproceedings{wang2025osdface,
+    title={{OSDFace}: One-Step Diffusion Model for Face Restoration},
+    author={Wang, Jingkai and Gong, Jue and Zhang, Lin and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun and Yang, Xiaokang},
+    booktitle={CVPR},
+    year={2025}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End BibTeX citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
