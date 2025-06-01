@@ -11,9 +11,10 @@
 
 #### 🔥🔥🔥 News
 
-- **2024-11-25:** This repo is released.
-- **2025-02-27:** Congratulations! OSDFace is accepted to CVPR 2025.
 - **2025-04-23:** Results are released. (Synthetic dataset: CelebA-Test; Real-world datasets: Wider-Test, LFW-Test, and WebPhoto-Test)
+- **2025-02-27:** Congratulations! OSDFace is accepted to CVPR 2025.
+- **2024-11-25:** This repo is released.
+
 
 ---
 
