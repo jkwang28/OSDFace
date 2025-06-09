@@ -127,11 +127,13 @@ We achieved state-of-the-art performance on synthetic and real-world datasets. D
 If you find the code helpful in your research or work, please cite the following paper(s).
 
 ```
-@inproceedings{wang2025osdface,
-    title={OSDFace: One-Step Diffusion Model for Face Restoration},
-    author={Wang, Jingkai and Gong, Jue and Zhang, Lin and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun and Yang, Xiaokang},
-    booktitle={CVPR},
-    year={2025}
+@InProceedings{wang2025osdface,
+    author    = {Wang, Jingkai and Gong, Jue and Zhang, Lin and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun and Yang, Xiaokang},
+    title     = {{OSDFace}: One-Step Diffusion Model for Face Restoration},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {12626-12636}
 }
 ```
 
