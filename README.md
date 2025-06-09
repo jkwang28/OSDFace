@@ -1,6 +1,6 @@
 # Website for OSDFace: One-Step Diffusion Model for Face Restoration
 
-Page: https://jkwang28.github.io/OSDFace-web/
+Page: https://jkwang28.github.io/OSDFace/
 
 Repo: https://github.com/jkwang28/OSDFace
 
