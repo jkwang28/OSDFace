@@ -74,3 +74,72 @@ document.addEventListener('DOMContentLoaded', function() {
     imageObserver.observe(img);
   });
 });
+
+// Image Comparer functionality
+document.addEventListener('DOMContentLoaded', function() {
+  function initImageComparer(element) {
+    const before = element.querySelector('.image-before');
+    const after = element.querySelector('.image-after');
+    const sliderLine = element.querySelector('.slider-line');
+    let isActive = false;
+
+    // Load images from data attributes
+    const beforeSrc = element.getAttribute('data-before');
+    const afterSrc = element.getAttribute('data-after');
+    
+    if (beforeSrc) before.src = beforeSrc;
+    if (afterSrc) after.src = afterSrc;
+
+    function updateSlider(x) {
+      const rect = element.getBoundingClientRect();
+      const position = Math.max(0, Math.min(rect.width, x - rect.left));
+      
+      sliderLine.style.left = position + 'px';
+      before.style.clip = `rect(0, ${position}px, ${rect.height}px, 0)`;
+    }
+
+    // Mouse events
+    element.addEventListener('mousedown', (e) => {
+      isActive = true;
+      updateSlider(e.clientX);
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isActive) return;
+      updateSlider(e.clientX);
+    });
+
+    document.addEventListener('mouseup', () => {
+      isActive = false;
+    });
+
+    // Touch events for mobile
+    element.addEventListener('touchstart', (e) => {
+      isActive = true;
+      updateSlider(e.touches[0].clientX);
+      e.preventDefault();
+    });
+
+    document.addEventListener('touchmove', (e) => {
+      if (!isActive) return;
+      updateSlider(e.touches[0].clientX);
+      e.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('touchend', () => {
+      isActive = false;
+    });
+
+    // Click to move slider
+    element.addEventListener('click', (e) => {
+      if (!isActive) {
+        updateSlider(e.clientX);
+      }
+    });
+  }
+
+  // Initialize all image comparers
+  const comparers = document.querySelectorAll('.image-comparer');
+  comparers.forEach(initImageComparer);
+});

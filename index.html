@@ -32,13 +32,12 @@
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
@@ -191,23 +190,56 @@
       <h2 class="title is-3 has-text-centered">Face Restoration</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-one-third">
-          <div style="width:300px;height:300px;overflow:hidden;border:0px">
+          <!-- <div style="width:300px;height:300px;overflow:hidden;border:0px">
             <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
               <iframe src="https://imgsli.com/MzIxNTU3" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
             </div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div style="width:300px;height:300px;overflow:hidden;border:0px">
-            <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
-              <iframe src="https://imgsli.com/MzIxNTcz" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
+          </div> -->
+          <div class="image-comparer" data-before="images/LFW-Test-A.Sener/Abdullatif_Sener_input.jpg" data-after="images/LFW-Test-A.Sener/Abdullatif_Sener_ours.jpg" data-title="Sample 1">
+            <img class="image-after" alt="After">
+            <img class="image-before" alt="Before">
+            <div class="slider-line">
+              <div class="slider-button"></div>
+            </div>
+            <div class="labels">
+              <span class="label">Input</span>
+              <span class="label">OSDFace</span>
             </div>
           </div>
         </div>
         <div class="column is-one-third">
-          <div style="width:300px;height:300px;overflow:hidden;border:0px">
+          <!-- <div style="width:300px;height:300px;overflow:hidden;border:0px">
+            <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
+              <iframe src="https://imgsli.com/MzIxNTcz" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
+            </div>
+          </div> -->
+          <div class="image-comparer" data-before="images/CelebA-Test-0012/0012_input.jpg" data-after="images/CelebA-Test-0012/0012_ours.jpg" data-title="Sample 2">
+            <img class="image-after" alt="After">
+            <img class="image-before" alt="Before">
+            <div class="slider-line">
+              <div class="slider-button"></div>
+            </div>
+            <div class="labels">
+              <span class="label">Input</span>
+              <span class="label">OSDFace</span>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <!-- <div style="width:300px;height:300px;overflow:hidden;border:0px">
             <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
               <iframe src="https://imgsli.com/MzIxNjU2" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
+            </div>
+          </div> -->
+          <div class="image-comparer" data-before="images/Wider-Test-0000/0000_input.jpg" data-after="images/Wider-Test-0000/0000_ours.jpg" data-title="Sample 3">
+            <img class="image-after" alt="After">
+            <img class="image-before" alt="Before">
+            <div class="slider-line">
+              <div class="slider-button"></div>
+            </div>
+            <div class="labels">
+              <span class="label">Input</span>
+              <span class="label">OSDFace</span>
             </div>
           </div>
         </div>
