@@ -1,6 +1,5 @@
 # OSDFace: One-Step Diffusion Model for Face Restoration
-
-[Jingkai Wang](https://github.com/jkwang28), [Jue Gong](https://github.com/gobunu), [Lin Zhang](https://github.com/wanliyungui), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), [Yulun Zhang](http://yulunzhang.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "One-Step Diffusion Model for Face Restoration", CVPR, 2025
+[[Jingkai Wang](https://github.com/jkwang28), [Jue Gong](https://github.com/gobunu), [Lin Zhang](https://github.com/wanliyungui), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), [Yulun Zhang](http://yulunzhang.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "One-Step Diffusion Model for Face Restoration", CVPR, 2025
 
 [![page](https://img.shields.io/badge/Project-Page-blue?logo=github&logoSvg)](https://jkwang28.github.io/OSDFace-web/)
 [![arXiv](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg)](https://arxiv.org/abs/2411.17163)
@@ -11,6 +10,7 @@
 
 #### 🔥🔥🔥 News
 
+- **2025-12-23:** Inference code and pretrained models are released. 
 - **2025-04-23:** Results are released. (Synthetic dataset: CelebA-Test; Real-world datasets: Wider-Test, LFW-Test, and WebPhoto-Test)
 - **2025-02-27:** Congratulations! OSDFace is accepted to CVPR 2025.
 - **2024-11-25:** This repo is released.
@@ -34,17 +34,25 @@
 
 ## ⚒️ TODO
 
-* [ ] Release code and pretrained models
+* [x] Release inference code and pretrained models
+* [ ] Release training code
 
 ## 🔗 Contents
 
-- [x] Datasets
-- [ ] Models
-- [ ] Testing
+- [x] [Environment](#datasets)
+- [x] [Datasets](#datasets)
+- [x] [Models](https://sjtueducn-my.sharepoint.com/:f:/g/personal/jingkaiwang_sjtu_edu_cn/EhIFpGRj6GxLoHG54TyeMT0Bg0wkiDHCcZ4B674k9veCiA?e=zQYHze)
+- [x] [Inference](#Inference)
 - [ ] Training
-- [x] [Results](#Results)
+- [x] [Results](#results)
 - [x] [Citation](#Citation)
 - [ ] [Acknowledgements](#Acknowledgements)
+
+## <a name="environment"></a>⚒️ Environment
+
+1. Create conda environment with Python 3.10. (`conda create -n osdface python=3.10`)
+2. Install [PyTorch 2.4.0](https://pytorch.org/get-started/previous-versions/#v240). (`pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://mirror.sjtu.edu.cn/pytorch-wheels/cu121`)
+3. Install `requirements.txt`. (`pip install -r requirements.txt`)
 
 ## <a name="datasets"></a>📊 Datasets
 
@@ -59,6 +67,26 @@ We use CelebA-Test as the synthetic dataset. The download link can refer to [DAE
 We use Wider-Test, LFW-Test, and WebPhoto-Test as the real-world datasets. The download links can refer to [DAEFR](https://github.com/LIAGM/DAEFR) and [VQFR](https://github.com/TencentARC/VQFR). 
 
 Thanks a lot for their contribution to Face Restoration. 
+
+## <a name="inference"></a>🧮 Inference
+
+1. Download the pretrained model from [Google Drive](https://drive.google.com/drive/folders/1Nci6KufB8t2Uj-6tobrw3S7kkfQUTLHV?usp=sharing). Put models in `pretrained/`, and put the test data in `data/`
+2. Run the inference bash `test.sh`. 
+
+## 💬 Tips 
+
+Since the offcial Stable Diffusion 2.1 is not avaliable, you could visit [ModelScope](https://modelscope.cn/models/stabilityai/stable-diffusion-2-1-base) to download it and use it locally. 
+
+If you meet an error from `diffusers`: 
+```sh
+File "... lib/python3.10/site-packages/diffusers/utils/dynamic_modules_utils.py", line 28, in <module>
+    from huggingface_hub import cached_download, hf_hub_download, model_info
+```
+
+you can edit the `dynamic_modules_utils.py` like: 
+
+1. Replace line 24 from `from huggingface_hub import cached_download, hf_hub_download, model_info` to `from huggingface_hub import hf_hub_download, model_info`. 
+2. Replace line 287 from `resolved_module_file = cached_download(` to `resolved_module_file = hf_hub_download(`. 
 
 ## <a name="results"></a>🔎 Results
 
@@ -141,4 +169,10 @@ If you find the code helpful in your research or work, please cite the following
 
 [TBD]
 
-<!-- ![Visitor Count](https://profile-counter.glitch.me/jkwang28/count.svg) -->
+<a href="https://www.star-history.com/#jkwang28/OSDFace&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=jkwang28/OSDFace&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=jkwang28/OSDFace&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=jkwang28/OSDFace&type=date&legend=top-left" />
+ </picture>
+</a>
