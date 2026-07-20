@@ -170,6 +170,10 @@ If you find the code helpful in your research or work, please cite the following
 [TBD]
 
 <!-- star-history:start -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/star-history/star-history-dark.svg">
+  <img alt="Star history" src="assets/star-history/star-history-light.svg">
+</picture>
 <!-- star-history:end -->
 
 <!-- <a href="https://www.star-history.com/#jkwang28/OSDFace&type=date&legend=top-left">
