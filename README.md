@@ -20,15 +20,15 @@
 
 > **Abstract:** Diffusion models have demonstrated impressive performance in face restoration. Yet, their multi-step inference process remains computationally intensive, limiting their applicability in real-world scenarios. Moreover, existing methods often struggle to generate face images that are harmonious, realistic, and consistent with the subject’s identity. In this work, we propose OSDFace, a novel one-step diffusion model for face restoration. Specifically, we propose a visual representation embedder (VRE) to better capture prior information and understand the input face. In VRE, low-quality faces are processed by a visual tokenizer and subsequently embedded with a vector-quantized dictionary to generate visual prompts. Additionally, we incorporate a facial identity loss derived from face recognition to further ensure identity consistency. We further employ a generative adversarial network (GAN) as a guidance model to encourage distribution alignment between the restored face and the ground truth. Experimental results demonstrate that OSDFace surpasses current state-of-the-art (SOTA) methods in both visual quality and quantitative metrics, generating high-fidelity, natural face images with high identity consistency.
 
-![](images/overall-osdface.png)
+![](assets/images/overall-osdface.png)
 
 ---
 
-<!-- ![vis-main-top](images/vis-main-top.png) -->
+<!-- ![vis-main-top](assets/images/vis-main-top.png) -->
 
-[<img src="images/CAT-0012.png" height="200"/>](https://imgsli.com/MzIxNTU3) [<img src="images/CAT-0051.png" height="200"/>](https://imgsli.com/MzIxNTU5) [<img src="images/CAT-0054.png" height="200"/>](https://imgsli.com/MzIxNTYw) [<img src="images/CAT-1093.png" height="200"/>](https://imgsli.com/MzIxNTYy)
+[<img src="assets/images/CAT-0012.png" height="200"/>](https://imgsli.com/MzIxNTU3) [<img src="assets/images/CAT-0051.png" height="200"/>](https://imgsli.com/MzIxNTU5) [<img src="assets/images/CAT-0054.png" height="200"/>](https://imgsli.com/MzIxNTYw) [<img src="assets/images/CAT-1093.png" height="200"/>](https://imgsli.com/MzIxNTYy)
 
-[<img src="images/LFW_Abdullatif_Sener.png" height="200"/>](https://imgsli.com/MzIxNTYz) [<img src="images/WebPhoto_0101.png" height="200"/>](https://imgsli.com/MzIxNTY4) [<img src="images/WT_0011.png" height="200"/>](https://imgsli.com/MzIxNTY5) [<img src="images/WT_0000.png" height="200"/>](https://imgsli.com/MzIxNTcz)
+[<img src="assets/images/LFW_Abdullatif_Sener.png" height="200"/>](https://imgsli.com/MzIxNTYz) [<img src="assets/images/WebPhoto_0101.png" height="200"/>](https://imgsli.com/MzIxNTY4) [<img src="assets/images/WT_0011.png" height="200"/>](https://imgsli.com/MzIxNTY5) [<img src="assets/images/WT_0000.png" height="200"/>](https://imgsli.com/MzIxNTcz)
 
 ---
 
@@ -96,12 +96,12 @@ We achieved state-of-the-art performance on synthetic and real-world datasets. D
 <summary>&ensp;Quantitative Comparisons (click to expand) </summary>
 <li> Results in Table 1 on synthetic dataset (CelebA-Test) from the main paper. 
 <p align="center">
-<img src="images/quan-celeba.png" >
+<img src="assets/images/quan-celeba.png" >
 </p>
 </li>
 <li> Results in Table 2 on real-world datasets (Wider-Test, LFW-Test, WebPhoto-Test) from the main paper. 
 <p align="center">
-<img src="images/quan-realworld.png" >
+<img src="assets/images/quan-realworld.png" >
 </p>
 </li>
 </details>
@@ -109,12 +109,12 @@ We achieved state-of-the-art performance on synthetic and real-world datasets. D
 <summary>&ensp;Visual Comparisons (click to expand) </summary>
 <li> Results in Figure 5 on synthetic dataset (CelebA-Test) from the main paper.
 <p align="center">
-<img src="images/vis-main-celeba.png" >
+<img src="assets/images/vis-main-celeba.png" >
 </p>
 </li>
 <li> Results in Figure 6 on real-world dataset (Wider-Test, LFW-Test, WebPhoto-Test) from the main paper.
 <p align="center">
-<img src="images/vis-main-realworld.png" >
+<img src="assets/images/vis-main-realworld.png" >
 </p>
 </li>
 </details>
@@ -122,13 +122,13 @@ We achieved state-of-the-art performance on synthetic and real-world datasets. D
 <summary style="margin-left: 2rem;">&ensp;More Comparisons on Synthetic Dataset... </summary>
 <li style="margin-left: 2rem;"> Results in Figure 4, 5, 6 on synthetic dataset (CelebA-Test) from supplemental material.
 <p align="center">
-<img src="images/vis-supp-celeba-1.png" >
+<img src="assets/images/vis-supp-celeba-1.png" >
 </p>
 <p align="center">
-<img src="images/vis-supp-celeba-2.png" >
+<img src="assets/images/vis-supp-celeba-2.png" >
 </p>
 <p align="center">
-<img src="images/vis-supp-celeba-3.png" >
+<img src="assets/images/vis-supp-celeba-3.png" >
 </p>
 </li>
 </details>
@@ -136,16 +136,16 @@ We achieved state-of-the-art performance on synthetic and real-world datasets. D
 <summary style="margin-left: 2rem;">&ensp;More Comparisons on Real-World Dataset... </summary>
 <li style="margin-left: 2rem;"> Results in Figure 7, 8, 9, 10 on real-world datasets (Wider-Test, LFW-Test, WebPhoto-Test) from supplemental material.
 <p align="center">
-<img src="images/vis-supp-wider.png" >
+<img src="assets/images/vis-supp-wider.png" >
 </p>
 <p align="center">
-<img src="images/vis-supp-lfw.png" >
+<img src="assets/images/vis-supp-lfw.png" >
 </p>
 <p align="center">
-<img src="images/vis-supp-webphoto.png" >
+<img src="assets/images/vis-supp-webphoto.png" >
 </p>
 <p align="center">
-<img src="images/vis-supp-realworld.png" >
+<img src="assets/images/vis-supp-realworld.png" >
 </p>
 </li>
 </details>
@@ -169,10 +169,13 @@ If you find the code helpful in your research or work, please cite the following
 
 [TBD]
 
-<a href="https://www.star-history.com/#jkwang28/OSDFace&type=date&legend=top-left">
+<!-- star-history:start -->
+<!-- star-history:end -->
+
+<!-- <a href="https://www.star-history.com/#jkwang28/OSDFace&type=date&legend=top-left">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=jkwang28/OSDFace&type=date&theme=dark&legend=top-left" />
    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=jkwang28/OSDFace&type=date&legend=top-left" />
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=jkwang28/OSDFace&type=date&legend=top-left" />
  </picture>
-</a>
+</a> -->
