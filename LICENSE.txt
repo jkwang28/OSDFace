@@ -1,0 +1,73 @@
+# OSDFace Non-Commercial Academic Research License
+
+**Version 1.0**
+
+Copyright (c) [YEAR] [COPYRIGHT HOLDER]
+
+All rights reserved.
+
+## 1. License Grant
+
+Subject to the terms and conditions of this License, the copyright holder grants you a limited, non-exclusive, non-transferable, revocable license to use the OSDFace project solely for non-commercial academic research, educational purposes, and scientific experimentation.
+
+This License applies to the following materials released as part of the OSDFace project:
+
+- Source code and software.
+- Pretrained model weights and checkpoints.
+- Associated configuration files, scripts, and documentation provided by the project.
+
+## 2. Permitted Use
+
+You may:
+
+- Use, reproduce, and modify the source code for non-commercial academic research.
+- Download, load, and evaluate the pretrained weights for non-commercial research and scientific experimentation.
+- Use the project for educational purposes, academic coursework, and university research projects.
+- Publish research findings, experimental results, and academic papers based on your use of the project, provided that you appropriately acknowledge and cite the original OSDFace project.
+- Redistribute modified source code or research materials solely for non-commercial academic purposes, provided that this License and the original copyright notices are retained.
+
+## 3. Prohibited Use
+
+You may not, without prior written permission from the copyright holder:
+
+- Use the source code, pretrained weights, or any part of the project for commercial purposes.
+- Incorporate the project into any commercial product, service, application, or system.
+- Use the project in commercial production environments or for activities intended to generate revenue or provide a commercial advantage.
+- Sell, sublicense, rent, or otherwise commercially distribute the source code, pretrained weights, or derivatives of the project.
+- Use the project to provide paid services, including commercial API access, hosted inference, or model-as-a-service offerings.
+
+For the avoidance of doubt, commercial use is prohibited regardless of whether the source code or pretrained weights are modified.
+
+## 4. Pretrained Weights and Derivative Models
+
+The pretrained weights are provided exclusively for non-commercial academic research and evaluation.
+
+Any fine-tuned models, derivative weights, or other model artifacts created using the pretrained weights are subject to the same non-commercial restrictions to the extent permitted by applicable law.
+
+This License does not grant any rights to use third-party materials, datasets, or components beyond the rights granted by their respective owners.
+
+## 5. Attribution
+
+Any academic publication, presentation, or public research output based on the project must appropriately acknowledge the OSDFace project and cite the relevant original publication, if applicable.
+
+## 6. No Warranty
+
+The project is provided "AS IS", without warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
+
+To the maximum extent permitted by applicable law, the copyright holder shall not be liable for any claim, damages, or other liability arising from the use of the project.
+
+## 7. Termination
+
+Any violation of this License automatically terminates the permissions granted under this License. Upon termination, you must cease all use of the project materials, subject to any rights that cannot be excluded under applicable law.
+
+## 8. Commercial Licensing
+
+If you wish to use the project for commercial purposes, you must obtain prior written permission or a separate commercial license from the copyright holder.
+
+## 9. Governing Terms
+
+This License constitutes the terms governing the permitted use of the OSDFace project materials identified in Section 1. If any provision is held unenforceable, the remaining provisions shall remain in effect to the extent permitted by applicable law.
+
+By downloading, accessing, or using the project materials, you acknowledge that you have read and agree to comply with the terms of this License.
+
+**End of License**
